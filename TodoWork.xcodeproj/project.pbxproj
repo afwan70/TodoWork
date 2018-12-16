@@ -14,9 +14,13 @@
 		ABD87D1121C14324002C86F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD87D0F21C14324002C86F1 /* Main.storyboard */; };
 		ABD87D1321C14327002C86F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD87D1221C14327002C86F1 /* Assets.xcassets */; };
 		ABD87D1621C14327002C86F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABD87D1421C14327002C86F1 /* LaunchScreen.storyboard */; };
+		D19D470254A6A886FAF35249 /* Pods_TodoWork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1BC75500E0117FABE1ADFA /* Pods_TodoWork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1BC75500E0117FABE1ADFA /* Pods_TodoWork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoWork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		244AEEA7079CE3D475C5E648 /* Pods-TodoWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoWork/Pods-TodoWork.debug.xcconfig"; sourceTree = "<group>"; };
+		509322E6BEFA1BC6B113F33E /* Pods-TodoWork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoWork.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoWork/Pods-TodoWork.release.xcconfig"; sourceTree = "<group>"; };
 		AB81229121C337810098918E /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		AB8122B421C4B7DF0098918E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		ABD87D0821C14324002C86F1 /* TodoWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,12 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D19D470254A6A886FAF35249 /* Pods_TodoWork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15EB8CF2BD06F36A259D0417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E1BC75500E0117FABE1ADFA /* Pods_TodoWork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AB035FC121C20834000F7E5A /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +91,8 @@
 			children = (
 				ABD87D0A21C14324002C86F1 /* TodoWork */,
 				ABD87D0921C14324002C86F1 /* Products */,
+				D176149B2A7D7BBF7591791A /* Pods */,
+				15EB8CF2BD06F36A259D0417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +117,15 @@
 			path = TodoWork;
 			sourceTree = "<group>";
 		};
+		D176149B2A7D7BBF7591791A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				244AEEA7079CE3D475C5E648 /* Pods-TodoWork.debug.xcconfig */,
+				509322E6BEFA1BC6B113F33E /* Pods-TodoWork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ABD87D1A21C14327002C86F1 /* Build configuration list for PBXNativeTarget "TodoWork" */;
 			buildPhases = (
+				5CACF6F16708257C06FE38ED /* [CP] Check Pods Manifest.lock */,
 				ABD87D0421C14324002C86F1 /* Sources */,
 				ABD87D0521C14324002C86F1 /* Frameworks */,
 				ABD87D0621C14324002C86F1 /* Resources */,
+				57DF071E106083CA2E92DAD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +193,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57DF071E106083CA2E92DAD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TodoWork/Pods-TodoWork-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TodoWork/Pods-TodoWork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CACF6F16708257C06FE38ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TodoWork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABD87D0421C14324002C86F1 /* Sources */ = {
@@ -320,6 +387,7 @@
 		};
 		ABD87D1B21C14327002C86F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244AEEA7079CE3D475C5E648 /* Pods-TodoWork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +406,7 @@
 		};
 		ABD87D1C21C14327002C86F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 509322E6BEFA1BC6B113F33E /* Pods-TodoWork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
